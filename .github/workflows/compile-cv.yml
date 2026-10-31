@@ -16,14 +16,14 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            cv_fr.tex
-            cv_en.tex
-            cv_it.tex
+            fr.tex
+            en.tex
+            it.tex
 
       - name: Move PDFs to deploy folder
         run: |
           mkdir -p public
-          mv cv_fr.pdf cv_en.pdf cv_it.pdf public/
+          mv fr.pdf en.pdf it.pdf public/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
