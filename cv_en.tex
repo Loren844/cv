@@ -1,0 +1,166 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/jakegut/resume (Jake Gutierrez, MIT)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% A4 page, adjusted margins
+\usepackage[a4paper,top=0.45in,bottom=0.45in,left=0.5in,right=0.5in]{geometry}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Lorenzo Baladier}  \\ \vspace{2pt}
+    \small \href{mailto:contact@lorenzo-baladier.fr}{\underline{contact@lorenzo-baladier.fr}} $|$
+    \href{https://linkedin.com/in/lorenzo-baladier}{\underline{linkedin.com/in/lorenzo-baladier}} $|$
+    \href{https://github.com/Loren844}{\underline{github.com/Loren844}} $|$
+    \href{https://lorenzo-baladier.fr}{\underline{lorenzo-baladier.fr}} \\ \vspace{2pt}
+    \textbf{\small Embedded Software Engineer $\cdot$ Seeking a full-time role in Paris from September 2027}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Polytech Nice Sophia -- Université Côte d'Azur}{Sophia Antipolis, FR}
+      {MSc-level Engineering Degree in Computer Science, IoT \& CPS, apprenticeship}{2024 -- 2027}
+    \resumeSubheading
+      {IUT Nice Côte d'Azur}{Sophia Antipolis, FR}
+      {University Diploma in Computer Science (DUT), apprenticeship}{2022 -- 2024}
+    \resumeSubheading
+      {Lycée Pierre et Marie Curie}{Menton, FR}
+      {French Baccalauréat, Scientific track, EsaBac (French--Italian dual diploma)}{2019 -- 2022}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Embedded \& SDV Software Engineer -- Apprentice}{Sep. 2024 -- Present}
+      {Ampere Software Technology}{Biot, FR}
+      \resumeItemListStart
+        \resumeItem{Designed and benchmarked \textbf{CarOS}, an automotive development platform built on Google's \textbf{Software-Defined Vehicle} environment}
+        \resumeItem{Brought the platform up on \textbf{Raspberry Pi} hardware and on \textbf{Cuttlefish} virtual devices; set up the \textbf{CI/CD} pipelines}
+        \resumeItem{Built end-to-end use cases covering service-oriented communication, vehicle diagnostics and data processing}
+        \resumeItem{Rewrote a Python prototype into a modular \textbf{Rust} CLI/TUI tool generating \textbf{SOME/IP}, \textbf{Protobuf} and GraphQL test commands, unit-tested with trait-based mocks and integrated into \textbf{GitLab CI}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Robotics \& Computer Vision Intern -- Visual Servoing}{May 2026 -- Aug. 2026}
+      {DNIIT -- Da Nang Institute of Innovative Technology}{Da Nang, Vietnam}
+      \resumeItemListStart
+        \resumeItem{Implemented closed-loop \textbf{visual servoing} of an industrial \textbf{SCARA} arm for dynamic pick-and-place of moving targets}
+        \resumeItem{Integrated real-time \textbf{YOLO} object detection and pose estimation with \textbf{ROS 2} and \textbf{MoveIt 2}}
+        \resumeItem{Validated kinematics and PID control in \textbf{MATLAB} and \textbf{Gazebo} before deploying on the physical robot -- \href{https://github.com/Loren844/project-10-dniit}{\underline{source code}}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer -- Apprentice}{Sep. 2022 -- Jul. 2024}
+      {ESI -- European Systems Integration}{Le Cannet, FR}
+      \resumeItemListStart
+        \resumeItem{Developed a \textbf{Java} application exporting data from a remote database to JSON}
+        \resumeItem{Automated end-to-end tests with Selenium/TestNG, then led their migration to \textbf{TypeScript/Cypress}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{CHIP-8 Emulator} $|$ \emph{Rust, SDL2} -- \href{https://github.com/Loren844/rust-chip-8}{\underline{github.com/Loren844/rust-chip-8}}}{2025}
+          \resumeItemListStart
+            \resumeItem{Emulated the CHIP-8 virtual machine: fetch-decode-execute loop, memory, registers, timers, display and keypad}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Go-Biking} $|$ \emph{C\#, SOAP/REST, ActiveMQ}}{School project}
+          \resumeItemListStart
+            \resumeItem{Service-oriented route planner combining bike-sharing and routing APIs, with a caching proxy and asynchronous messaging}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Rust, C, C++, Python, Java, TypeScript, Bash} \\
+     \textbf{Embedded \& Automotive}{: Linux, Raspberry Pi, Cuttlefish, Software-Defined Vehicle, SOA, SOME/IP, Protobuf} \\
+     \textbf{Robotics}{: ROS 2, MoveIt 2, Gazebo, YOLO, MATLAB} \\
+     \textbf{Tools}{: Git, GitLab CI/CD, Cypress, Selenium} \\
+     \textbf{Spoken Languages}{: French (native), Italian (fluent, EsaBac), English (TOEIC 955/990)}
+    }}
+ \end{itemize}
+
+\end{document}
