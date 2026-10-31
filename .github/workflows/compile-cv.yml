@@ -1,0 +1,32 @@
+name: Compile and Deploy CVs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX CVs
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            cv_fr.tex
+            cv_en.tex
+            cv_it.tex
+
+      - name: Move PDFs to deploy folder
+        run: |
+          mkdir -p public
+          mv cv_fr.pdf cv_en.pdf cv_it.pdf public/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
